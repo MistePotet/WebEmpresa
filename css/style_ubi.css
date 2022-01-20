@@ -1,0 +1,423 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+  
+.checkbox {
+    display: none;
+}
+  
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+  
+.header-container {
+    width: 90%;
+    position: relative;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+  
+.header-logo {
+    position: relative;
+    top: 1em;
+    left: -1em;
+    width: 40%;
+}
+  
+.btn-label {
+    width: 2rem;
+    height: 1.4rem;
+}
+  
+.header-button {
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    top: 3em;
+    right: 1em;
+    transition: all 0.2s;
+}
+  
+.header-button::before {
+    content: "";
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    bottom: 15px;
+    transition: all 0.2s;
+}
+  
+.header-button::after {
+    content: "";
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    top: 15px;
+    transition: all 0.2s;
+}
+  
+.menu {
+    background: #d1d1d1;
+    width: 100%;
+    height: 20rem;
+    position: fixed;
+    z-index: 9;
+    top: -25rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 4rem;
+    transition: all 0.5s;
+}
+  
+.menu ul {
+    list-style: none;
+    z-index: 11;
+}
+  
+.menu li {
+    margin: 2em;
+}
+  
+.menu a {
+    font-size: 2em;
+    margin: 0 1rem;
+    color: #000;
+    text-decoration: none;
+}
+  
+.checkbox:checked ~ .menu {
+    background: #fff;
+    top: 0rem;
+}
+  
+.checkbox:checked + header .header-container label .header-button {
+    background: none;
+}
+  
+.checkbox:checked + header .header-container label .header-button::before {
+    transform: rotate(35deg);
+    top: 0;
+}
+  
+.checkbox:checked + header .header-container label .header-button::after {
+    transform: rotate(-35deg);
+    top: 0;
+}
+
+.banner{
+    width: 100%;
+    height: 100vh;
+    background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(../images/fondoPNG.PNG);
+    background-size: cover;
+    background-position: center;
+}
+
+.navbar {
+    display: none;
+}
+
+.two-colums {
+    margin-left: 8%;
+  }
+  
+.two-colums #img_ubi, .two-colums .content {
+    padding: 5%;
+}
+  
+.two-colums .content {  
+    color: white;
+    margin-top: -1em;
+}
+  
+.content #p::first-letter {
+    font-size: 40px;
+    font-family:'Times New Roman', Times, serif;
+}
+
+#img_ubi img {
+    padding-top: 40%;
+    width: 70%;
+}
+
+.content h1 {
+    font-size: 30px;
+    margin-bottom: -1em;
+}
+
+@media screen and (min-width: 1025px) {
+
+    *{
+      margin: 0;
+      padding: 0;
+      font-family: sans-serif;
+    }
+    
+    .checkbox {
+      display: none;
+    }
+    
+    header {
+      position: fixed;
+      width: 100%;
+      z-index: 10;
+    }
+    
+    .header-container {
+      width: 90%;
+      position: relative;
+      margin: 1rem auto;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    
+    .header-logo {
+      width: 20%;
+      display: none;
+    }
+    
+    .btn-label {
+      width: 2rem;
+      height: 1.4rem;
+    }
+    
+    .header-button {
+      width: 2rem;
+      height: 0.2rem;
+      background: #000;
+      position: absolute;
+      top: 1.9rem;  
+      transition: all 0.2s;
+      display: none;
+    }
+    
+    .header-button::before, .header-button::after {
+      content: "";
+      width: 2rem;
+      height: 0.2rem;
+      background: #000;
+      position: absolute;
+      top: -0.6rem;
+      transition: all 0.2s;
+    }
+    
+    .header-button::after {
+      top: 0.6rem;
+    }
+    
+    .menu {
+      background: #d1d1d1;
+      width: 100%;
+      height: 10rem;
+      position: fixed;
+      z-index: 9;
+      top: -12rem;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      text-align: center;
+      padding-top: 2rem;
+      transition: all 0.5s;
+      display: none;
+    }
+    
+    .menu ul {
+      list-style: none;
+    }
+    
+    .menu li {
+      margin: 0.5rem;
+    }
+    
+    .menu a {
+      margin: 0 1rem;
+      color: #000;
+      text-decoration: none;
+    }
+    
+    .checkbox:checked ~ .menu {
+      background: #fff;
+      top: 0rem;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button {
+      background: none;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button::before {
+      transform: rotate(35deg);
+      top: 0;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button::after {
+      transform: rotate(-35deg);
+      top: 0;
+    }
+    
+    .banner{
+      width: 100%;
+      height: 100vh;
+      background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)),url(../images/fondoPNG.PNG);
+      background-size: cover;
+      background-position: center;
+    }
+    
+    .navbar{
+      width: 85%;
+      margin: auto;
+      padding: 35px 0;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+    
+    .logo1{
+      width: 320px;
+    }
+    
+    .navbar ul li{
+      list-style: none;
+      display: inline-block;
+      margin: 0 20px;
+      position: relative;
+    }
+    
+    .navbar ul li a{
+      text-decoration: none;
+      color: white;
+      text-transform: uppercase;
+    }
+    
+    .navbar ul li::after{
+      content: '';
+      height: 3px;
+      width: 0;
+      background: turquoise;
+      position: absolute;
+      left: 0;
+      bottom: -10px;
+      transition: 0.5s;
+    }
+    
+    .navbar ul li:hover::after{
+      width: 100%;
+    }
+    
+    .contenido{
+      width: 100%;
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      text-align: center;
+      color: white;
+    }
+    
+    .contenido h1{
+      font-size: 70px;
+      margin-top: 80px;
+    }
+    
+    .contenido p{
+      margin: 20px auto;
+      font-weight: 100;
+      line-height: 25px;
+    }
+    
+    button{
+      width: 200px;
+      padding: 15px 0;
+      text-align: center;
+      margin: 20px 10px;
+      border-radius: 25px;
+      font-weight: bold;
+      border: 2px solid turquoise;
+      background: transparent;
+      color: white;
+      cursor: pointer;
+      position: relative;
+      overflow: hidden;
+    }
+    
+    span{
+      background: turquoise;
+      height: 100%;
+      width: 0;
+      border-radius: 25px;
+      position: absolute;
+      left: 0;
+      bottom: 0;
+      z-index: -1;
+      transition: 0.5s;
+    }
+    
+    button:hover span{
+      width: 100%;
+    }
+    
+    button:hover{
+      border: none;
+    }
+    
+    .two-colums {
+        margin-left: 8%;
+        margin-top: 4%;
+    }
+      
+    .two-colums #img_ubi, .two-colums .content {
+        float: left;
+    }
+      
+    .two-colums .content {
+        color: white;
+        margin-top: 3em;
+    }
+      
+    .content #p::first-letter {
+        font-size: 40px;
+        font-family:'Times New Roman', Times, serif;
+    }
+      
+    .two-colums #img_ubi {
+        transform: scale(0.8);
+    }
+
+    #img_ubi img {
+        padding-top: 0%;
+        width: 120%;
+        position: relative;
+        top: -100px;
+    }
+
+    .content h1 {
+        margin-bottom: 0;
+        font-size: 35px;
+    }
+    
+    .nosotros {
+      margin: 0 5% 0 0;
+      color: whitesmoke;
+      text-align: center;
+      
+    }
+    
+    .nosotros img {
+      width: 15%;
+    }
+    
+    #h, #j, #s, #c {
+      margin-left: 5%;
+    }
+    
+    
+  }

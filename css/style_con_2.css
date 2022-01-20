@@ -1,0 +1,423 @@
+* {
+    margin: 0 0 3em 0;
+    padding: 0;
+    font-family: sans-serif;
+    text-align: center;
+}
+
+body {
+    background-color: #B9B9B9;
+}
+
+h3 {
+    display: block;
+    position: relative;
+    top: 8em;
+    text-align: left;
+    padding: 10px;
+    border-bottom: 2px tomato solid;
+    border-top: 2px tomato solid;
+}
+
+.checkbox {
+    display: none;
+}
+
+header {
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+}
+
+.header-container {
+    width: 90%;
+    position: relative;
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.header-logo {
+    position: relative;
+    top: 1em;
+    left: -1em;
+    width: 40%;
+}
+
+.btn-label {
+    width: 2rem;
+    height: 1.4rem;
+}
+
+.header-button {
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    top: 3em;
+    right: 1em;
+    transition: all 0.2s;
+}
+
+.header-button::before {
+    content: "";
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    bottom: 15px;
+    right: 0.5px;
+    transition: all 0.2s;
+}
+
+.header-button::after {
+    content: "";
+    width: 3rem;
+    height: 0.4em;
+    background: #000;
+    position: absolute;
+    top: 15px;
+    right: 0.5px;
+    transition: all 0.2s;
+}
+
+.menu {
+    background: #d1d1d1;
+    width: 100%;
+    height: 20rem;
+    position: fixed;
+    z-index: 9;
+    top: -27rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    text-align: center;
+    padding-top: 6rem;
+    transition: all 0.5s;
+}
+
+.menu ul {
+    list-style: none;
+    z-index: 11;
+}
+
+.menu li {
+    margin: 2em;
+}
+
+.menu a {
+    font-size: 2em;
+    margin: 0 1rem;
+    color: #000;
+    text-decoration: none;
+}
+
+.checkbox:checked ~ .menu {
+    background: #fff;
+    top: 0rem;
+}
+
+.checkbox:checked + header .header-container label .header-button {
+    background: none;
+}
+
+.checkbox:checked + header .header-container label .header-button::before {
+    transform: rotate(35deg);
+    top: 0;
+}
+
+.checkbox:checked + header .header-container label .header-button::after {
+    transform: rotate(-35deg);
+    top: 0;
+}
+
+.navbar {
+    display: none;
+}  
+
+fieldset {
+    margin: 0 auto;
+    margin-bottom: 7em;
+    width: 90%;
+    position: relative;
+    top: 7em;
+}
+
+textarea, input[type="text"], input[type="email"], legend {
+    text-align: left;
+}
+
+legend {
+    font-size: 20px;
+    margin: 0 0 0 0;
+}
+
+div.elemento {
+    margin: 40px 0;
+}
+  
+label {
+    display: block;
+    font-family: 'Aleo';
+    padding-bottom: 4px;
+    font-size: 1.25em;
+    margin: 0 0 0 0;
+}
+
+input, select, textarea {
+    background-color: #e3e3e3;
+    margin: 0;
+    border-radius: 2px;
+    border: 1px solid #ccc;
+    box-sizing: border-box;
+    font-size: 1.25em;
+    font-family: 'Aleo';
+    width: 90%;
+    padding: 8px;
+}
+  
+textarea {
+    height: 250px;
+}
+  
+button {
+    height: 50px;
+    background: green;
+    color: white;
+    border: 2px solid darkgreen;
+    font-size: 1.25em;
+    font-family: 'Aleo';
+    border-radius: 4px;
+    cursor: pointer;
+}
+  
+button:hover {
+    border: 2px solid black;
+}
+
+@media screen and (min-width: 1025px) {
+    * {
+        margin: 0 0 3em 0;
+        padding: 0;
+        font-family: sans-serif;
+        text-align: center;
+    }
+
+    body {
+        background-color: #B9B9B9;
+    }
+    
+    h3 {                     
+        margin: 0 auto;   
+        display: block;
+        width: 650px;
+        position: relative;
+        top: -5em;
+        text-align: left;
+        padding: 10px;
+        border-bottom: 2px tomato solid;
+        border-top: 2px tomato solid;
+    }
+    
+    .checkbox {
+        display: none;
+    }
+      
+    header {
+        position: fixed;
+        width: 100%;
+        z-index: 10;
+    }
+    
+    .header-container {
+        width: 90%;
+        position: relative;
+        margin: 1rem auto;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .header-logo {
+        width: 20%;
+        display: none;
+    }
+    
+    .btn-label {
+        width: 2rem;
+        height: 1.4rem;
+    }
+    
+    .header-button {
+        width: 2rem;
+        height: 0.2rem;
+        background: #000;
+        position: absolute;
+        top: 1.9rem;  
+        transition: all 0.2s;
+        display: none;
+    }
+    
+    .header-button::before, .header-button::after {
+        content: "";
+        width: 2rem;
+        height: 0.2rem;
+        background: #000;
+        position: absolute;
+        top: -0.6rem;
+        transition: all 0.2s;
+    }
+    
+    .header-button::after {
+        top: 0.6rem;
+    }
+    
+    .menu {
+        background: #d1d1d1;
+        width: 100%;
+        height: 10rem;
+        position: fixed;
+        z-index: 9;
+        top: -12rem;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        text-align: center;
+        padding-top: 2rem;
+        transition: all 0.5s;
+        display: none;
+    }
+    
+    .menu ul {
+        list-style: none;
+    }
+    
+    .menu li {
+        margin: 0.5rem;
+    }
+    
+    .menu a {
+        margin: 0 1rem;
+        color: #000;
+        text-decoration: none;
+    }
+    
+    .checkbox:checked ~ .menu {
+        background: #fff;
+        top: 0rem;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button {
+        background: none;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button::before {
+        transform: rotate(35deg);
+        top: 0;
+    }
+    
+    .checkbox:checked + header .header-container label .header-button::after {
+        transform: rotate(-35deg);
+        top: 0;
+    }
+    
+    .navbar{
+        width: 85%;
+        margin: auto;
+        padding: 35px 0;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    
+    .logo1{
+        width: 320px;
+    }
+    
+    .navbar ul li{
+        list-style: none;
+        display: inline-block;
+        margin: 0 20px;
+        position: relative;
+    }
+    
+    .navbar ul li a{
+        text-decoration: none;
+        color: black;
+        text-transform: uppercase;
+    }
+    
+    .navbar ul li::after{
+        content: '';
+        height: 3px;
+        width: 0;
+        background: turquoise;
+        position: absolute;
+        left: 0;
+        bottom: -10px;
+        transition: 0.5s;
+    }
+    
+    .navbar ul li:hover::after{
+        width: 100%;
+    }
+
+    fieldset {
+        width: 40%;
+        position: relative;
+        top: -5em;
+    }
+    
+    textarea, input[type="text"], input[type="email"], legend {
+        text-align: left;
+    }
+    
+    legend {
+        font-size: 20px;
+        margin: 0 0 0 0;
+    }
+    
+    div.elemento {
+        margin: 40px 0;
+    }
+      
+    label {
+        display: block;
+        font-family: 'Aleo';
+        padding-bottom: 4px;
+        font-size: 1.25em;
+        margin: 0 0 0 0;
+    }
+    
+    input, select, textarea {
+        background-color: #e3e3e3;
+        margin: 0;
+        border-radius: 2px;
+        border: 1px solid #ccc;
+        box-sizing: border-box;
+        font-size: 1.25em;
+        font-family: 'Aleo';
+        width: 90%;
+        padding: 8px;
+    }
+
+    textarea {
+        height: 150px;
+    }
+      
+    button {
+        height: 50px;
+        background: green;
+        color: white;
+        border: 2px solid darkgreen;
+        font-size: 1.25em;
+        font-family: 'Aleo';
+        border-radius: 4px;
+        cursor: pointer;
+    }
+      
+    button:hover {
+        border: 2px solid black;
+    }
+}
